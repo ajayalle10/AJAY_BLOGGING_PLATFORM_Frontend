@@ -26,11 +26,12 @@ export default {
     }
   },
   methods:{
-    //promoises
+    //promises
     async fetchblogs(){
       const res = await fetch('https://ajay-blogging-platform-backend.onrender.com/api');
       const data = await res.json()
       console.log(data)
+      console.log(res)
       return data
     }
   },

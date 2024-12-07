@@ -1,12 +1,8 @@
 <template>
-  <div v-for="blog of blogs" :key="blog.id" >
-
-     
-    <SubBlogComponent :blog=blog />
-
+  <!-- Iterate directly over blogs -->
+  <div v-for="blog in blogs" :key="blog.id">
+    <SubBlogComponent :blog="blog" />
   </div>
-
-  
 </template>
 
 <script>
@@ -15,20 +11,17 @@ import SubBlogComponent from './SubBlogComponent.vue';
 export default {
   name: "BlogComponent",
   props: {
-   blogs: Array
+    blogs: {
+      type: Array, // Validate that blogs is an array
+      required: true
+    }
   },
-  components:{
+  components: {
     SubBlogComponent
-  },
-  data() {
-    return {
-      // Extended description for more content
-      extendedDescription: "Read more to discover insightful details about the topic and why it matters in today's context.",
-    };
-  },
+  }
 };
 </script>
 
 <style>
-
+/* Add styles here if necessary */
 </style>
