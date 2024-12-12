@@ -6,9 +6,6 @@
       <p class="author">By: {{ blog.authorName }}</p>
       <p class="date">Published: {{ new Date(blog.createdDate).toLocaleDateString() }}</p>
       <p class="description">{{ blog.blogDescription }}</p>
-      <p class="extended-description">
-          {{ blog.extendedDescription }}
-      </p>
       </div>
   </div>
 
